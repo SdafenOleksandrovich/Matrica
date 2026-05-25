@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>666</title>
+</head>
+
+<body>
+
+<h3>Введіть елементи матриці 3×3</h3>
+
+<input id="a11"> <input id="a12"> <input id="a13"><br><br>
+<input id="a21"> <input id="a22"> <input id="a23"><br><br>
+<input id="a31"> <input id="a32"> <input id="a33"><br><br>
+
+<button onclick="calc()">Знайти визначник</button>
+
+<p id="result"></p>
+
+<script>
+
+function calc(){
+
+let a11 = Number(document.getElementById("a11").value);
+let a12 = Number(document.getElementById("a12").value);
+let a13 = Number(document.getElementById("a13").value);
+
+let a21 = Number(document.getElementById("a21").value);
+let a22 = Number(document.getElementById("a22").value);
+let a23 = Number(document.getElementById("a23").value);
+
+let a31 = Number(document.getElementById("a31").value);
+let a32 = Number(document.getElementById("a32").value);
+let a33 = Number(document.getElementById("a33").value);
+
+let det =
+a11*(a22*a33 - a23*a32)
+- a12*(a21*a33 - a23*a31)
++ a13*(a21*a32 - a22*a31);
+
+document.getElementById("result").innerText =
+"Визначник = " + det;
+
+}
+
+</script>
+
+</body>
+</html>
